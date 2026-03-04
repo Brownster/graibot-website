@@ -1,0 +1,13 @@
+<svg width="920" height="220" viewBox="0 0 920 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">GraiBot logo</title>
+  <desc id="desc">GraiBot brand wordmark with tagline.</desc>
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F4F7FA"/>
+      <stop offset="1" stop-color="#9AA3AD"/>
+    </linearGradient>
+  </defs>
+  <text x="8" y="110" fill="url(#metal)" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="122" font-weight="800" letter-spacing="1.5">GraiBot</text>
+  <text x="10" y="184" fill="#D84848" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="56" font-weight="700">Red-team</text>
+  <text x="288" y="184" fill="#BAC1CB" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="56" font-weight="500">your call center AI agents before attackers do</text>
+</svg>
