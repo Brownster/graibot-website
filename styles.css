@@ -43,10 +43,16 @@ body {
 }
 
 .logo {
-  color: var(--text);
   text-decoration: none;
-  font-weight: 800;
-  letter-spacing: 0.6px;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  display: block;
+  width: clamp(200px, 27vw, 340px);
+  height: auto;
 }
 
 nav {
@@ -313,6 +319,10 @@ h1 {
 }
 
 @media (max-width: 900px) {
+  .logo img {
+    width: clamp(170px, 44vw, 250px);
+  }
+
   nav {
     display: none;
   }
