@@ -67,6 +67,7 @@
         <nav>
           <a href="#features">Features</a>
           <a href="#how">How it works</a>
+          <a href="#blog">Blog</a>
           <a href="#contact">Contact</a>
         </nav>
         <a class="btn btn-ghost" href="https://app.graibot.com" aria-label="Customer login">Customer Login</a>
@@ -222,6 +223,67 @@
             <p>
               Monitor production quality via scheduling or block unsafe deploys
               with our CI/CD gate.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="blog" class="container section blog">
+        <h2>From the GraiBot Security Blog</h2>
+        <p class="blog-intro">
+          Practical guidance for teams deploying AI agents in call centers, finance,
+          and healthcare.
+        </p>
+        <div class="blog-grid">
+          <article class="card blog-post">
+            <p class="blog-meta">June 2026 · 8 min read</p>
+            <h3>How to Build a Conversation-Based Adversarial Test Library for LLM Chatbots</h3>
+            <p>
+              Most chatbot failures are no longer single-turn prompt tricks—they are
+              multi-step failures that chain retrieval, memory, and tool use. That is
+              why enterprise teams need a living adversarial test library rather than a
+              one-time red-team sprint.
+            </p>
+            <p>
+              In this post, we break down a practical framework: collect evidence from
+              incident databases and CVEs, normalize scenarios into reusable test
+              templates, and run repeated evaluations that track attack success,
+              sensitive-data leakage, and unauthorized tool actions over time.
+            </p>
+            <ul>
+              <li>Map every test to OWASP LLM risk categories and MITRE ATLAS techniques.</li>
+              <li>Use synthetic PII/PHI/PCI canaries for safe, high-confidence leak detection.</li>
+              <li>Gate releases with reproducible regression metrics instead of one-off pass/fail checks.</li>
+            </ul>
+            <p>
+              The outcome: a measurable security program that improves with each model,
+              prompt, and workflow change.
+            </p>
+          </article>
+
+          <article class="card blog-post">
+            <p class="blog-meta">June 2026 · 7 min read</p>
+            <h3>What Prompt Injection Means for Regulated AI: Call Centers, Finance, and Healthcare</h3>
+            <p>
+              The same attack can have very different consequences depending on domain
+              context. In a call center, it might trigger account takeover support.
+              In finance, it can expose payment data. In healthcare, it can disclose
+              protected health information.
+            </p>
+            <p>
+              We outline domain-specific scenarios and controls your team should test
+              before production: identity-verification bypass attempts, indirect
+              injections hidden in retrieved documents, and high-risk tool actions that
+              must require explicit human approval.
+            </p>
+            <ul>
+              <li>Call centers: stress-test social-engineering pressure and verification flows.</li>
+              <li>Finance: treat card-data leakage and unauthorized account actions as critical severity.</li>
+              <li>Healthcare: enforce minimum-necessary PHI disclosure and recipient validation.</li>
+            </ul>
+            <p>
+              Security for LLM apps is not a static checklist. It is an operating model
+              with telemetry, thresholds, and fast response loops.
             </p>
           </article>
         </div>

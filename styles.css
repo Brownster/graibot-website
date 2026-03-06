@@ -307,6 +307,37 @@ h1 {
   color: var(--muted);
 }
 
+
+.blog-intro {
+  color: var(--muted);
+  max-width: 760px;
+}
+
+.blog-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.blog-post h3 {
+  margin-top: 0.35rem;
+}
+
+.blog-post p,
+.blog-post li {
+  color: var(--muted);
+}
+
+.blog-meta {
+  margin: 0;
+  color: var(--cyan) !important;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .contact {
   text-align: center;
 }
@@ -330,7 +361,8 @@ h1 {
   .hero,
   .grid,
   .why-grid,
-  .workflow-grid {
+  .workflow-grid,
+  .blog-grid {
     grid-template-columns: 1fr;
   }
 
