@@ -3,39 +3,151 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chatbot Regression Testing & Hallucination Monitoring | GraiBot</title>
-    <meta name="description" content="Prevent regressions in AI call center agents with golden-path suites, hallucination detection, and continuous production monitoring." />
-    <link rel="canonical" href="https://graibot.com/chatbot-regression-and-hallucination-monitoring" />
+    <title>Chatbot Regression Testing and Hallucination Monitoring | GraiBot</title>
+    <meta
+      name="description"
+      content="Prevent regressions in AI call center agents with golden-path suites, hallucination detection, and continuous production monitoring."
+    />
     <meta name="robots" content="index, follow" />
+    <meta name="author" content="GraiBot" />
+    <meta name="theme-color" content="#0a0a0b" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="canonical" href="https://graibot.com/chatbot-regression-and-hallucination-monitoring" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="GraiBot" />
+    <meta property="og:title" content="Chatbot Regression Testing and Hallucination Monitoring | GraiBot" />
+    <meta
+      property="og:description"
+      content="Run golden-path suites on every release and monitor production conversations for hallucinations, drift, and policy regressions."
+    />
+    <meta property="og:url" content="https://graibot.com/chatbot-regression-and-hallucination-monitoring" />
+    <meta property="og:image" content="https://graibot.com/assets/graibot-logo.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chatbot Regression Testing and Hallucination Monitoring | GraiBot" />
+    <meta
+      name="twitter:description"
+      content="Golden-path suites, hallucination detection, and continuous production monitoring for AI agents."
+    />
+    <meta name="twitter:image" content="https://graibot.com/assets/graibot-logo.svg" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Service",
         "name": "Chatbot Regression Testing and Hallucination Monitoring",
-        "provider": { "@type": "Organization", "name": "GraiBot" },
+        "provider": {
+          "@type": "Organization",
+          "name": "GraiBot"
+        },
         "serviceType": "Regression and hallucination monitoring for AI call center agents",
         "areaServed": "Global",
         "url": "https://graibot.com/chatbot-regression-and-hallucination-monitoring"
       }
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What should regression testing measure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Regression testing should measure answer quality, routing correctness, policy adherence, leakage risk, tool behavior, and escalation outcomes across the same versioned scenarios over time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why monitor hallucinations after launch?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Post-launch monitoring catches drift from model updates, retrieval changes, traffic shifts, and real-world edge cases that were not visible during pre-release testing."
+            }
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="topbar"><div class="container nav"><a class="logo" href="index.html"><img src="assets/graibot-logo.svg" alt="GraiBot" /></a><nav><a href="index.html#solutions">Solutions</a><a href="index.html#blog">Blog</a><a href="index.html#contact">Contact</a></nav><a class="btn btn-ghost" href="https://app.graibot.com">Customer Login</a></div></header>
-    <main class="container section page-hero">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="logo" href="index.html" aria-label="GraiBot home"><img src="assets/graibot-logo.svg" alt="GraiBot logo" /></a>
+        <nav>
+          <a href="index.html#solutions">Solutions</a>
+          <a href="blog/index.html">Blog</a>
+          <a href="news/index.html">AI News</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <a class="btn btn-ghost" href="https://app.graibot.com">Customer Login</a>
+      </div>
+    </header>
+    <main id="main-content" class="container section page-hero">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Regression Testing and Hallucination Monitoring</span>
+      </nav>
       <p class="eyebrow">Service</p>
-      <h1>Chatbot Regression Testing & Hallucination Monitoring</h1>
-      <p class="lead">Run golden-path test suites on every release and monitor production conversations for hallucinations, drift, and policy regressions.</p>
+      <h1>Chatbot regression testing and hallucination monitoring</h1>
+      <p class="lead">
+        Run golden-path test suites on every release and monitor production
+        conversations for hallucinations, drift, and policy regressions.
+      </p>
       <div class="hero-cta"><a class="btn btn-primary" href="mailto:sales@graibot.com">See monitoring workflow</a></div>
     </main>
     <section class="container section content-section">
-      <h2>Operational outcomes</h2>
-      <ul>
-        <li>Catch quality drift before CSAT and containment rates drop</li>
-        <li>Track hallucination incidence by intent and escalation class</li>
-        <li>Gate deployments using threshold-based pass/fail criteria</li>
-      </ul>
+      <div class="prose">
+        <h2>Operational outcomes</h2>
+        <ul>
+          <li>Catch quality drift before CSAT and containment rates drop.</li>
+          <li>Track hallucination incidence by intent and escalation class.</li>
+          <li>Gate deployments using threshold-based pass and fail criteria.</li>
+        </ul>
+
+        <h2>Regression testing is the memory of your AI program</h2>
+        <p>
+          AI systems change often: prompts evolve, retrieval content shifts, tools
+          get updated, and model providers quietly improve or degrade behaviors over
+          time. Without a stable regression layer, teams are forced to rely on
+          anecdote. That usually means they learn about a serious defect from
+          customers instead of from their own release process.
+        </p>
+
+        <h2>What to monitor beyond hallucinations</h2>
+        <p>
+          Hallucination is only one failure mode. Teams should also track policy
+          adherence, escalation quality, routing accuracy, data leakage, and whether
+          the agent uses tools correctly. A monitoring system becomes much more
+          useful when it reports behavior by scenario family, intent, severity, and
+          operational impact instead of only producing a generic error rate.
+        </p>
+
+        <h2>How GraiBot fits into the release and production loop</h2>
+        <p>
+          GraiBot keeps golden-path and high-risk scenarios in a versioned library,
+          reruns them on every meaningful change, and surfaces evidence when the
+          output drifts. That allows the same test assets to support pre-release
+          QA, post-release monitoring, and remediation verification. It connects
+          naturally with
+          <a href="ai-chatbot-qa-testing.html">AI chatbot QA testing</a> and
+          <a href="ai-call-center-jailbreak-testing.html">adversarial testing</a>,
+          giving teams one feedback loop instead of three disconnected processes.
+        </p>
+      </div>
+
+      <section class="faq-list">
+        <h2>FAQ</h2>
+        <article class="card">
+          <h3>What should regression testing measure?</h3>
+          <p>It should measure answer quality, routing correctness, policy adherence, leakage risk, tool behavior, and escalation outcomes across the same versioned scenarios over time.</p>
+        </article>
+        <article class="card">
+          <h3>Why monitor hallucinations after launch?</h3>
+          <p>Post-launch monitoring catches drift from model updates, retrieval changes, traffic shifts, and real-world edge cases that were not visible during pre-release testing.</p>
+        </article>
+      </section>
     </section>
     <footer class="container footer"><p>© <span id="year"></span> GraiBot. Continuous testing for AI voice and chat agents.</p></footer>
     <script src="script.js"></script>

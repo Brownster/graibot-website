@@ -21,6 +21,22 @@ body {
   line-height: 1.5;
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--cyan);
+  color: #001214;
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 .container {
   width: min(1120px, 92vw);
   margin-inline: auto;
@@ -329,7 +345,27 @@ h1 {
   color: var(--muted);
 }
 
+.blog-post h2 {
+  margin: 0.35rem 0 0.65rem;
+  line-height: 1.2;
+}
+
+.news-item h2,
+.news-item h3 {
+  margin: 0.35rem 0 0.65rem;
+  line-height: 1.2;
+}
+
 .blog-meta {
+  margin: 0;
+  color: var(--cyan) !important;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.news-source {
   margin: 0;
   color: var(--cyan) !important;
   font-family: "JetBrains Mono", monospace;
@@ -362,7 +398,8 @@ h1 {
   .grid,
   .why-grid,
   .workflow-grid,
-  .blog-grid {
+  .blog-grid,
+  .related-grid {
     grid-template-columns: 1fr;
   }
 
@@ -377,12 +414,16 @@ h1 {
 }
 
 .card h3 a,
+.news-item h2 a,
+.blog-post h2 a,
 .blog-post h3 a {
   color: var(--text);
   text-decoration: none;
 }
 
 .card h3 a:hover,
+.news-item h2 a:hover,
+.blog-post h2 a:hover,
 .blog-post h3 a:hover,
 nav a:hover {
   color: var(--cyan);
@@ -400,4 +441,111 @@ nav a:hover {
 .content-section p,
 .content-section li {
   color: var(--muted);
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.breadcrumbs a,
+.text-link {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover,
+.text-link:hover,
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.stacked-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.compact-stack {
+  margin-top: 1rem;
+}
+
+.article-layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.article-header {
+  max-width: 760px;
+}
+
+.article-meta {
+  color: var(--cyan) !important;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.prose {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.prose h2,
+.prose h3 {
+  margin: 1.3rem 0 0;
+}
+
+.prose p,
+.prose li {
+  max-width: 74ch;
+}
+
+.prose a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+.cta-panel {
+  background: linear-gradient(180deg, rgb(0 245 255 / 10%), rgb(22 22 24 / 92%));
+  border: 1px solid rgb(0 245 255 / 18%);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.cta-panel p {
+  color: var(--muted);
+}
+
+.related-links h2,
+.faq-list h2 {
+  margin-bottom: 1rem;
+}
+
+.related-grid,
+.faq-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.related-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.section-cta {
+  margin-top: 1.25rem;
+}
+
+.news-note {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.news-section {
+  margin-top: 2rem;
 }

@@ -1,12 +1,251 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>What Prompt Injection Means for Regulated AI | GraiBot</title>
-<meta name="description" content="Prompt injection risks in call centers, finance, and healthcare and how to design testing controls before production deployment." />
-<link rel="canonical" href="https://graibot.com/blog/prompt-injection-for-regulated-ai" />
-<meta name="robots" content="index, follow" /><link rel="stylesheet" href="../styles.css" /><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Prompt Injection Means for Regulated AI","author":{"@type":"Organization","name":"GraiBot"},"publisher":{"@type":"Organization","name":"GraiBot"},"mainEntityOfPage":"https://graibot.com/blog/prompt-injection-for-regulated-ai"}</script>
-</head><body>
-<header class="topbar"><div class="container nav"><a class="logo" href="../index.html"><img src="../assets/graibot-logo.svg" alt="GraiBot" /></a><nav><a href="../index.html#solutions">Solutions</a><a href="../index.html#blog">Blog</a></nav><a class="btn btn-ghost" href="https://app.graibot.com">Customer Login</a></div></header>
-<main class="container section content-section"><p class="eyebrow">Blog</p><h1>What Prompt Injection Means for Regulated AI</h1><p>Domain context changes consequences. This guide outlines control objectives and test scenarios for call center, finance, and healthcare AI agents.</p></main>
-<footer class="container footer"><p>© <span id="year"></span> GraiBot. Continuous testing for AI voice and chat agents.</p></footer><script src="../script.js"></script>
-</body></html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Prompt Injection Means for Regulated AI | GraiBot</title>
+    <meta
+      name="description"
+      content="Prompt injection risks in call centers, finance, and healthcare and how to design testing controls before production deployment."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="GraiBot" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="canonical" href="https://graibot.com/blog/prompt-injection-for-regulated-ai" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="GraiBot" />
+    <meta property="og:title" content="What Prompt Injection Means for Regulated AI" />
+    <meta
+      property="og:description"
+      content="How prompt injection affects call centers, finance, and healthcare workflows, and what teams should test before launch."
+    />
+    <meta property="og:url" content="https://graibot.com/blog/prompt-injection-for-regulated-ai" />
+    <meta property="og:image" content="https://graibot.com/assets/graibot-logo.svg" />
+    <meta property="article:published_time" content="2026-03-05" />
+    <meta property="article:modified_time" content="2026-03-10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What Prompt Injection Means for Regulated AI" />
+    <meta
+      name="twitter:description"
+      content="A practical guide to prompt injection controls for regulated AI workflows handling identity, payments, and health data."
+    />
+    <meta name="twitter:image" content="https://graibot.com/assets/graibot-logo.svg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "What Prompt Injection Means for Regulated AI",
+        "description": "Prompt injection risks in call centers, finance, and healthcare and how to design testing controls before production deployment.",
+        "datePublished": "2026-03-05",
+        "dateModified": "2026-03-10",
+        "author": {
+          "@type": "Organization",
+          "name": "GraiBot"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "GraiBot",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://graibot.com/assets/graibot-logo.svg"
+          }
+        },
+        "mainEntityOfPage": "https://graibot.com/blog/prompt-injection-for-regulated-ai"
+      }
+    </script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="logo" href="../index.html" aria-label="GraiBot home">
+          <img src="../assets/graibot-logo.svg" alt="GraiBot logo" />
+        </a>
+        <nav>
+          <a href="../index.html#solutions">Solutions</a>
+          <a href="index.html">Blog</a>
+          <a href="../news/index.html">AI News</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+        <a class="btn btn-ghost" href="https://app.graibot.com">Customer Login</a>
+      </div>
+    </header>
+
+    <main id="main-content" class="container section content-section">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Blog</a>
+        <span>/</span>
+        <span>Prompt Injection in Regulated AI</span>
+      </nav>
+
+      <article class="article-layout">
+        <header class="article-header">
+          <p class="eyebrow">Blog</p>
+          <h1>What prompt injection means for regulated AI</h1>
+          <p class="lead">
+            In regulated environments, prompt injection is not just a model safety
+            issue. It is a business-process security issue that can trigger account
+            takeover support, payment exposure, or unauthorized disclosure of PHI.
+          </p>
+          <p class="article-meta"><time datetime="2026-03-05">March 5, 2026</time> · 7 min read</p>
+        </header>
+
+        <div class="prose">
+          <p>
+            The phrase prompt injection sometimes makes teams think about a clever
+            string that tricks a model into ignoring its instructions. That is only
+            the visible layer. In production systems, the real risk is that an
+            attacker changes the model's decision path inside a workflow that has
+            business meaning. If the agent handles identity checks, payments, claims,
+            or healthcare requests, a manipulated answer can trigger downstream harm
+            even when the language output looks superficially polite.
+          </p>
+
+          <h2>Why regulated teams should care more than average</h2>
+          <p>
+            Regulated organizations already know how to think in terms of control
+            failure, not just software defects. Prompt injection belongs in that
+            frame. A bad response may be evidence of a bigger issue: unsafe
+            authorization logic, poor tool gating, weak retrieval hygiene, or a
+            missing human-approval checkpoint. Once the system is connected to real
+            customer workflows, the consequence can be financial loss, data exposure,
+            or a reportable compliance event.
+          </p>
+          <p>
+            That is why testing should focus on business outcomes. Ask whether the
+            agent helped an attacker bypass verification, exposed sensitive data,
+            took an unauthorized action, or misled the customer about what happened.
+            Those outcomes matter more than whether the exact model prompt was
+            technically overridden.
+          </p>
+
+          <h2>Call centers: identity and social pressure are the core risk</h2>
+          <p>
+            In a contact center, injection often arrives disguised as urgency,
+            authority, or emotional escalation. An attacker might claim to be a
+            manager, a distressed family member, or a customer who cannot complete
+            verification because of an emergency. The goal is to push the agent into
+            account-specific actions before required checks complete.
+          </p>
+          <p>
+            Teams should test whether the system consistently refuses to skip
+            verification, whether it leaks clues about internal procedures, and
+            whether the handoff path to a human agent preserves the security context.
+            A secure answer is not only "no." It is "no, and the workflow stays
+            contained."
+          </p>
+
+          <h2>Finance: unauthorized actions and card data change the severity</h2>
+          <p>
+            In finance, injection attempts frequently aim at transfers, password
+            resets, payment-detail confirmation, or exposure of partial account
+            information. Even a small leak can become useful reconnaissance. That
+            means the severity threshold is lower than many teams assume.
+          </p>
+          <p>
+            Tests should cover direct override attempts, poisoned retrieval content,
+            and indirect pressure such as "read back what is on file so I can confirm
+            it." If tools exist for payments or account operations, they should
+            require explicit policy checks and ideally independent confirmation
+            before execution. A well-designed evaluation harness should verify that
+            no money-moving or identity-sensitive tool is reachable through model
+            persuasion alone.
+          </p>
+
+          <h2>Healthcare: minimum necessary disclosure matters</h2>
+          <p>
+            Healthcare teams often focus on whether PHI is disclosed at all. The
+            harder question is whether the disclosure exceeded the minimum necessary
+            standard or went to the wrong person. Prompt injection in a healthcare
+            workflow can take the form of impersonation, context poisoning in
+            retrieved notes, or attempts to coerce the model into summarizing more
+            than the patient requested.
+          </p>
+          <p>
+            Evaluations should include recipient validation, consent boundaries,
+            masking behavior, and escalation rules for high-risk requests. The safe
+            system is not the one that never answers. It is the one that answers only
+            what is permitted, to the right person, with the right audit trail.
+          </p>
+
+          <h2>Design controls that survive model changes</h2>
+          <p>
+            The strongest defenses are outside the prompt. Use strict tool
+            authorization, retrieval filtering, input provenance checks, memory
+            scoping, and human approvals for sensitive actions. Those controls are
+            less fragile than a single system message telling the model not to be
+            manipulated.
+          </p>
+          <p>
+            You should still test the prompt layer, but the prompt should be treated
+            as one control among several. When organizations rely on the model's
+            self-restraint alone, they end up confusing polite refusals with actual
+            security boundaries.
+          </p>
+
+          <h2>What a practical test plan looks like</h2>
+          <p>
+            Build scenario families around the most important workflows: identity
+            verification, data disclosure, account changes, payments, escalations,
+            and retrieved-document usage. For each family, define a normal case, a
+            social-pressure case, a poisoned-context case, and a multi-turn case
+            where the attacker slowly changes the frame of the conversation.
+          </p>
+          <p>
+            Pair those scenarios with explicit failure criteria. In a call center,
+            one bypassed verification should likely be a release-blocking defect. In
+            healthcare, an unnecessary PHI disclosure may deserve the same status.
+            Operationally, this fits well with
+            <a href="../ai-chatbot-qa-testing.html">AI chatbot QA testing</a> and
+            <a href="../chatbot-regression-and-hallucination-monitoring.html">regression monitoring</a>,
+            because the same high-risk scenarios should run before launch and after
+            every meaningful system change.
+          </p>
+
+          <h2>Prompt injection is a workflow problem</h2>
+          <p>
+            The key shift is to stop treating injection as a niche red-team trick.
+            In regulated AI, it is one of the ways an attacker probes workflow
+            controls. Teams that model it that way make better decisions: they test
+            business impact, tighten tool permissions, add approval steps where they
+            matter, and measure outcomes over time. That is what turns prompt
+            injection work from a security demo into an operational control.
+          </p>
+        </div>
+
+        <section class="cta-panel">
+          <h2>Need prompt injection testing for a regulated workflow?</h2>
+          <p>
+            GraiBot helps teams pressure-test identity checks, tool permissions, and
+            data-disclosure boundaries before production rollout.
+          </p>
+          <a class="btn btn-primary" href="mailto:sales@graibot.com">Talk to GraiBot</a>
+        </section>
+
+        <section class="related-links">
+          <h2>Related pages</h2>
+          <div class="related-grid">
+            <article class="card">
+              <h3><a href="../ai-call-center-jailbreak-testing.html">AI call center jailbreak testing</a></h3>
+              <p>Coverage for injection attempts, role-play manipulation, and risky tool actions.</p>
+            </article>
+            <article class="card">
+              <h3><a href="adversarial-test-library-llm-chatbots.html">Conversation-based adversarial test libraries</a></h3>
+              <p>How to turn real incidents and threat models into reusable regression suites.</p>
+            </article>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="container footer">
+      <p>© <span id="year"></span> GraiBot. Continuous testing for AI voice and chat agents.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

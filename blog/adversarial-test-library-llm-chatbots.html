@@ -1,12 +1,253 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>How to Build a Conversation-Based Adversarial Test Library for LLM Chatbots | GraiBot</title>
-<meta name="description" content="A practical framework to build and maintain adversarial test libraries for enterprise LLM chatbots and call center agents." />
-<link rel="canonical" href="https://graibot.com/blog/adversarial-test-library-llm-chatbots" />
-<meta name="robots" content="index, follow" /><link rel="stylesheet" href="../styles.css" /><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How to Build a Conversation-Based Adversarial Test Library for LLM Chatbots","author":{"@type":"Organization","name":"GraiBot"},"publisher":{"@type":"Organization","name":"GraiBot"},"mainEntityOfPage":"https://graibot.com/blog/adversarial-test-library-llm-chatbots"}</script>
-</head><body>
-<header class="topbar"><div class="container nav"><a class="logo" href="../index.html"><img src="../assets/graibot-logo.svg" alt="GraiBot" /></a><nav><a href="../index.html#solutions">Solutions</a><a href="../index.html#blog">Blog</a></nav><a class="btn btn-ghost" href="https://app.graibot.com">Customer Login</a></div></header>
-<main class="container section content-section"><p class="eyebrow">Blog</p><h1>How to Build a Conversation-Based Adversarial Test Library for LLM Chatbots</h1><p>Most failures are multi-turn and tool-assisted. Build a living library tied to incidents, OWASP LLM risk categories, and release gates.</p></main>
-<footer class="container footer"><p>© <span id="year"></span> GraiBot. Continuous testing for AI voice and chat agents.</p></footer><script src="../script.js"></script>
-</body></html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Build a Conversation-Based Adversarial Test Library for LLM Chatbots | GraiBot</title>
+    <meta
+      name="description"
+      content="A practical framework for building adversarial test libraries for enterprise LLM chatbots and AI voice agents, with reusable scenarios and release gates."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="GraiBot" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="canonical" href="https://graibot.com/blog/adversarial-test-library-llm-chatbots" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="GraiBot" />
+    <meta property="og:title" content="How to Build a Conversation-Based Adversarial Test Library for LLM Chatbots" />
+    <meta
+      property="og:description"
+      content="Build a living adversarial library tied to incidents, OWASP LLM risks, synthetic canaries, and release gates."
+    />
+    <meta property="og:url" content="https://graibot.com/blog/adversarial-test-library-llm-chatbots" />
+    <meta property="og:image" content="https://graibot.com/assets/graibot-logo.svg" />
+    <meta property="article:published_time" content="2026-03-08" />
+    <meta property="article:modified_time" content="2026-03-10" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Build a Conversation-Based Adversarial Test Library for LLM Chatbots" />
+    <meta
+      name="twitter:description"
+      content="A practical framework for turning incidents and threat models into reusable adversarial tests for enterprise AI agents."
+    />
+    <meta name="twitter:image" content="https://graibot.com/assets/graibot-logo.svg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How to Build a Conversation-Based Adversarial Test Library for LLM Chatbots",
+        "description": "A practical framework for building adversarial test libraries for enterprise LLM chatbots and AI voice agents.",
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-10",
+        "author": {
+          "@type": "Organization",
+          "name": "GraiBot"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "GraiBot",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://graibot.com/assets/graibot-logo.svg"
+          }
+        },
+        "mainEntityOfPage": "https://graibot.com/blog/adversarial-test-library-llm-chatbots"
+      }
+    </script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="logo" href="../index.html" aria-label="GraiBot home">
+          <img src="../assets/graibot-logo.svg" alt="GraiBot logo" />
+        </a>
+        <nav>
+          <a href="../index.html#solutions">Solutions</a>
+          <a href="index.html">Blog</a>
+          <a href="../news/index.html">AI News</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+        <a class="btn btn-ghost" href="https://app.graibot.com">Customer Login</a>
+      </div>
+    </header>
+
+    <main id="main-content" class="container section content-section">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">Blog</a>
+        <span>/</span>
+        <span>Adversarial Test Library</span>
+      </nav>
+
+      <article class="article-layout">
+        <header class="article-header">
+          <p class="eyebrow">Blog</p>
+          <h1>How to build a conversation-based adversarial test library for LLM chatbots</h1>
+          <p class="lead">
+            Most chatbot failures are no longer single-turn prompt tricks. They are
+            multi-step failures that chain retrieval, memory, workflow logic, and
+            tool use. That shift changes how security teams should build tests.
+          </p>
+          <p class="article-meta"><time datetime="2026-03-08">March 8, 2026</time> · 8 min read</p>
+        </header>
+
+        <div class="prose">
+          <p>
+            A useful adversarial test library does not start with clever attack
+            prompts. It starts with evidence. Look at recent incidents, model
+            regressions, support escalations, red-team findings, and production
+            conversations that made operators uncomfortable. Those cases show where
+            your system is actually brittle. Once you can describe the failure
+            pattern, you can turn it into a repeatable scenario that survives model
+            swaps, prompt updates, and tool changes.
+          </p>
+
+          <h2>Start with failure classes, not isolated prompts</h2>
+          <p>
+            Teams often collect a folder of one-off jailbreak strings and call that
+            a library. That is not enough. Modern AI agents fail through
+            combinations: a user frames a request as urgency, retrieval adds unsafe
+            context, memory preserves a misleading instruction, and a tool executes
+            before a policy check happens. If you only store the literal prompt, you
+            lose the mechanism of failure.
+          </p>
+          <p>
+            A stronger library groups tests by failure class. Examples include
+            identity-verification bypass, policy override through role-play,
+            sensitive-data exfiltration, unauthorized tool use, and prompt
+            injection through retrieved content. Each class should include multiple
+            scenario variants so the test suite does not overfit to one wording.
+          </p>
+
+          <h2>Normalize every scenario into a reusable template</h2>
+          <p>
+            The most practical format is a template with a small number of required
+            fields: objective, attacker persona, business context, conversation
+            setup, tool state, expected safe behavior, and failure criteria. For a
+            call center flow, also capture whether the caller is authenticated,
+            which back-end systems are in scope, and which actions would create
+            regulatory or financial exposure.
+          </p>
+          <p>
+            This normalization matters because it lets you generate many concrete
+            tests from one design. You can vary tone, urgency, accent, verbosity,
+            prior turns, and retrieved context while preserving the same security
+            objective. That is how the library becomes durable instead of brittle.
+          </p>
+
+          <h2>Map tests to recognized risk taxonomies</h2>
+          <p>
+            Internal labels are rarely enough for governance. Map each scenario to
+            external taxonomies your security and compliance teams already know. In
+            practice that usually means OWASP Top 10 for LLM Applications, MITRE
+            ATLAS techniques, and your own internal severity model. When a failed
+            scenario is tied to a recognized risk class, the output becomes easier
+            to triage, report, and prioritize.
+          </p>
+          <p>
+            The mapping also helps you see gaps. If your library is rich in generic
+            prompt injection tests but thin on tool misuse or data leakage, the
+            dashboard should make that obvious. Coverage is a portfolio problem, not
+            just a pass or fail problem.
+          </p>
+
+          <h2>Use synthetic canaries to detect leaks safely</h2>
+          <p>
+            Many teams hesitate to test leakage aggressively because they do not
+            want real customer data in the harness. That is the right instinct.
+            Instead, seed synthetic PII, PHI, PCI, or internal codes that should
+            never be returned to the caller. Canary values make leak detection
+            precise and auditable without adding privacy risk to the evaluation
+            itself.
+          </p>
+          <p>
+            For example, place synthetic account numbers in retrieval sources,
+            memory state, and mocked system responses. Then ask whether the agent
+            ever repeats, summarizes, or confirms them in an unsafe context. This
+            moves the conversation from subjective reviewer judgment to
+            high-confidence evidence.
+          </p>
+
+          <h2>Score outcomes at the behavior level</h2>
+          <p>
+            Mature teams do not judge scenarios with a single boolean. They score
+            multiple outcome dimensions: attack success, policy violation, customer
+            harm potential, data leakage, unauthorized tool invocation, and whether
+            the agent recovered gracefully. That richer scoring model gives you
+            trend data across releases and helps separate cosmetic language changes
+            from real risk reduction.
+          </p>
+          <p>
+            In regulated workflows, define blocking thresholds ahead of time. A
+            single critical leak or unauthorized account action should usually stop
+            the release. Lower-severity behavioral drift may create a warning,
+            ticket, or monitoring escalation instead of a deployment block.
+          </p>
+
+          <h2>Run the library continuously, not just before launch</h2>
+          <p>
+            The value of the library compounds when it becomes part of the delivery
+            system. Run core scenarios on every prompt, model, retrieval, and tool
+            change. Run broader campaign suites on a schedule. When incidents occur
+            in production, add them back into the library as regression tests so the
+            same class of failure cannot quietly return a month later.
+          </p>
+          <p>
+            This is where pages like <a href="../ai-call-center-jailbreak-testing.html">AI call center jailbreak testing</a> and
+            <a href="../chatbot-regression-and-hallucination-monitoring.html">regression and hallucination monitoring</a> connect:
+            adversarial findings should feed directly into release gates and ongoing
+            monitoring, not live in a disconnected security spreadsheet.
+          </p>
+
+          <h2>A simple operating model</h2>
+          <p>
+            If you need a starting point, use a weekly loop. Review incidents and
+            escalations, convert the highest-value findings into normalized
+            templates, attach taxonomy labels and severity, run the suite on the
+            current build, and promote any high-confidence failures into release
+            gates. That cadence creates a system that improves with each model,
+            prompt, and workflow change.
+          </p>
+          <p>
+            The core idea is simple: stop treating adversarial testing as a special
+            event. Treat it as a versioned, evidence-based library that grows with
+            the product. That is how you move from performative red-teaming to a
+            measurable security program.
+          </p>
+        </div>
+
+        <section class="cta-panel">
+          <h2>Need to turn adversarial findings into repeatable release gates?</h2>
+          <p>
+            GraiBot helps teams operationalize conversation-based attack suites for
+            voice agents and chatbots.
+          </p>
+          <a class="btn btn-primary" href="mailto:sales@graibot.com">Talk to GraiBot</a>
+        </section>
+
+        <section class="related-links">
+          <h2>Related pages</h2>
+          <div class="related-grid">
+            <article class="card">
+              <h3><a href="../ai-call-center-jailbreak-testing.html">AI call center jailbreak testing</a></h3>
+              <p>Service overview for prompt injection, policy bypass, and social-engineering attack simulations.</p>
+            </article>
+            <article class="card">
+              <h3><a href="prompt-injection-for-regulated-ai.html">Prompt injection in regulated AI</a></h3>
+              <p>How attack impact changes across call centers, finance, and healthcare workflows.</p>
+            </article>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="container footer">
+      <p>© <span id="year"></span> GraiBot. Continuous testing for AI voice and chat agents.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
