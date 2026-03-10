@@ -370,3 +370,34 @@ h1 {
     padding-top: 2.4rem;
   }
 }
+
+
+.card p {
+  color: var(--muted);
+}
+
+.card h3 a,
+.blog-post h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.card h3 a:hover,
+.blog-post h3 a:hover,
+nav a:hover {
+  color: var(--cyan);
+}
+
+.page-hero {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.content-section {
+  max-width: 900px;
+}
+
+.content-section p,
+.content-section li {
+  color: var(--muted);
+}
