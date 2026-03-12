@@ -38,60 +38,6 @@
         "description": "Curated AI news links focused on AI agents, safety, evaluations, and enterprise deployment."
       }
     </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "AI in the News stories",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "url": "https://openai.com/index/openai-to-acquire-promptfoo/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "url": "https://openai.com/index/gpt-5-4-thinking-system-card"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "url": "https://www.anthropic.com/responsible-scaling-policy"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "url": "https://www.anthropic.com/news/claude-sonnet-4-6"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "url": "https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 7,
-            "url": "https://incidentdatabase.ai/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 8,
-            "url": "https://incidentdatabase.ai/apps/newsdigest/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 9,
-            "url": "https://incidentdatabase.ai/taxonomies/"
-          }
-        ]
-      }
-    </script>
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
@@ -126,64 +72,12 @@
         Recent AI stories that matter for model safety, agent operations,
         evaluation, and enterprise deployment.
       </p>
-      <p class="news-note">Last updated March 10, 2026. This page is curated manually.</p>
+      <p id="news-updated-at" class="news-note">Last auto-refresh: loading...</p>
 
-      <div class="stacked-list">
-        <article class="card news-item">
-          <p class="news-source">March 9, 2026 · OpenAI</p>
-          <h2><a href="https://openai.com/index/openai-to-acquire-promptfoo/" target="_blank" rel="noopener noreferrer">OpenAI to acquire Promptfoo</a></h2>
-          <p>
-            This is directly relevant to GraiBot's market. It signals that evals,
-            adversarial testing, and red-teaming are moving closer to the core model
-            platform rather than staying at the tooling edge.
-          </p>
-        </article>
-
-        <article class="card news-item">
-          <p class="news-source">March 5, 2026 · OpenAI</p>
-          <h2><a href="https://openai.com/index/gpt-5-4-thinking-system-card" target="_blank" rel="noopener noreferrer">GPT-5.4 Thinking System Card</a></h2>
-          <p>
-            Relevant because leading model launches increasingly ship with explicit
-            safety documentation, capability analysis, and deployment mitigations.
-          </p>
-        </article>
-
-        <article class="card news-item">
-          <p class="news-source">February 24, 2026 · Anthropic</p>
-          <h2><a href="https://www.anthropic.com/responsible-scaling-policy" target="_blank" rel="noopener noreferrer">Anthropic Responsible Scaling Policy Version 3.0</a></h2>
-          <p>
-            Important because frontier-model governance is becoming a competitive and
-            operational differentiator, not just a research-side concern.
-          </p>
-        </article>
-
-        <article class="card news-item">
-          <p class="news-source">February 17, 2026 · Anthropic</p>
-          <h2><a href="https://www.anthropic.com/news/claude-sonnet-4-6" target="_blank" rel="noopener noreferrer">Introducing Claude Sonnet 4.6</a></h2>
-          <p>
-            Relevant because model iteration speed remains high, which increases the
-            need for disciplined regression testing across prompt, tool, and workflow changes.
-          </p>
-        </article>
-
-        <article class="card news-item">
-          <p class="news-source">February 12, 2026 · Google DeepMind</p>
-          <h2><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/" target="_blank" rel="noopener noreferrer">Gemini 3 Deep Think: Advancing science, research and engineering</a></h2>
-          <p>
-            Useful to track because reasoning-model advances can shift user
-            expectations, benchmark baselines, and threat models at the same time.
-          </p>
-        </article>
-
-        <article class="card news-item">
-          <p class="news-source">March 9, 2026 · Microsoft</p>
-          <h2><a href="https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/" target="_blank" rel="noopener noreferrer">Introducing the First Frontier Suite built on Intelligence + Trust</a></h2>
-          <p>
-            Relevant because enterprise AI buying is expanding from single models
-            toward full agent, security, and governance suites.
-          </p>
-        </article>
-      </div>
+      <div id="auto-news-list" class="stacked-list"></div>
+      <noscript>
+        <p class="news-note">Enable JavaScript to load the automated AI news feed.</p>
+      </noscript>
 
       <section class="news-section">
         <h2>Incident watch</h2>
@@ -226,10 +120,10 @@
       </section>
 
       <section class="cta-panel">
-        <h2>Want this page automated?</h2>
+        <h2>Want custom sources added?</h2>
         <p>
-          The current version is editorial and static. The next step would be a
-          small pipeline that refreshes the page from approved sources on a schedule.
+          This page now auto-refreshes from approved feeds. We can extend it with
+          domain-specific sources and custom filters for your team.
         </p>
         <a class="btn btn-primary" href="mailto:sales@graibot.com">Talk to GraiBot</a>
       </section>
@@ -240,5 +134,6 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script src="./news.js"></script>
   </body>
 </html>
