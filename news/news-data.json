@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-03-11T16:36:26.577Z",
+  "totalSources": 3,
+  "items": [
+    {
+      "title": "Improving instruction hierarchy in frontier LLMs",
+      "link": "https://openai.com/index/instruction-hierarchy-challenge",
+      "source": "OpenAI",
+      "publishedAt": "2026-03-10T11:00:00.000Z"
+    },
+    {
+      "title": "New ways to learn math and science in ChatGPT",
+      "link": "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt",
+      "source": "OpenAI",
+      "publishedAt": "2026-03-10T10:00:00.000Z"
+    },
+    {
+      "title": "OpenAI to acquire Promptfoo",
+      "link": "https://openai.com/index/openai-to-acquire-promptfoo",
+      "source": "OpenAI",
+      "publishedAt": "2026-03-09T10:00:00.000Z"
+    },
+    {
+      "title": "How our open-source AI model SpeciesNet is helping to promote wildlife conservation",
+      "link": "https://blog.google/company-news/outreach-and-initiatives/sustainability/speciesnet-open-source-ai-wildlife/",
+      "source": "Google Blog",
+      "publishedAt": "2026-03-06T18:00:00.000Z"
+    },
+    {
+      "title": "Codex Security: now in research preview",
+      "link": "https://openai.com/index/codex-security-now-in-research-preview",
+      "source": "OpenAI",
+      "publishedAt": "2026-03-06T10:00:00.000Z"
+    },
+    {
+      "title": "How Descript enables multilingual video dubbing at scale",
+      "link": "https://openai.com/index/descript",
+      "source": "OpenAI",
+      "publishedAt": "2026-03-06T10:00:00.000Z"
+    },
+    {
+      "title": "How Balyasny Asset Management built an AI research engine for investing",
+      "link": "https://openai.com/index/balyasny-asset-management",
+      "source": "OpenAI",
+      "publishedAt": "2026-03-06T07:00:00.000Z"
+    },
+    {
+      "title": "Ask a Techspert: How does AI understand my visual searches?",
+      "link": "https://blog.google/company-news/inside-google/googlers/how-google-ai-visual-search-works/",
+      "source": "Google Blog",
+      "publishedAt": "2026-03-05T18:00:00.000Z"
+    },
+    {
+      "title": "The latest AI news we announced in February",
+      "link": "https://blog.google/innovation-and-ai/products/google-ai-updates-february-2026/",
+      "source": "Google Blog",
+      "publishedAt": "2026-03-05T16:30:00.000Z"
+    },
+    {
+      "title": "Introducing GPT-5.4",
+      "link": "https://openai.com/index/introducing-gpt-5-4",
+      "source": "OpenAI",
+      "publishedAt": "2026-03-05T10:00:00.000Z"
+    },
+    {
+      "title": "GPT-5.4 Thinking System Card",
+      "link": "https://openai.com/index/gpt-5-4-thinking-system-card",
+      "source": "OpenAI",
+      "publishedAt": "2026-03-05T10:00:00.000Z"
+    },
+    {
+      "title": "Reasoning models struggle to control their chains of thought, and that’s good",
+      "link": "https://openai.com/index/reasoning-models-chain-of-thought-controllability",
+      "source": "OpenAI",
+      "publishedAt": "2026-03-05T10:00:00.000Z"
+    }
+  ]
+}
